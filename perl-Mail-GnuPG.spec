@@ -1,7 +1,7 @@
 %define module	Mail-GnuPG
 %define name	perl-%{module}
-%define version	0.08
-%define release	%mkrel 6
+%define version	0.10
+%define release	%mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -45,4 +45,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/Mail
 %{_mandir}/*/*
-
