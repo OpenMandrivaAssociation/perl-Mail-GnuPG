@@ -18,6 +18,7 @@ BuildRequires:	perl(GnuPG::Interface)
 BuildRequires:  perl(Class::MethodMaker)
 BuildRequires:  perl-MIME-tools
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Use GnuPG::Interface to process or create PGP signed or encrypted email.
