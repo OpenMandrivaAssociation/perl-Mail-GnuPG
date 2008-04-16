@@ -1,6 +1,6 @@
 %define module	Mail-GnuPG
 %define name	perl-%{module}
-%define version	0.10
+%define version	0.15
 %define release	%mkrel 1
 
 Name:		%{name}
