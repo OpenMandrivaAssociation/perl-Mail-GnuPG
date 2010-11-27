@@ -1,16 +1,14 @@
-%define module	Mail-GnuPG
-%define name	perl-%{module}
-%define version	0.15
-%define release	%mkrel 5
+%define upstream_name    Mail-GnuPG
+%define upstream_version 0.15
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 Summary:	Process email with GPG
 License:	GPL or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Mail/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Mail/%{upstream_name}-%{upstream_version}.tar.gz
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
@@ -24,7 +22,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}
 Use GnuPG::Interface to process or create PGP signed or encrypted email.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
