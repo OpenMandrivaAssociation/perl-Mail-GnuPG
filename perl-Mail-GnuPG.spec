@@ -1,14 +1,14 @@
 %define upstream_name    Mail-GnuPG
-%define upstream_version 0.16
+%define upstream_version 0.19
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 0.19
+Release:	1
 Summary:	Process email with GPG
 License:	GPL or Artistic
 Group:		Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Mail/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Mail/Mail-GnuPG-0.19.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(GnuPG::Interface)
@@ -91,4 +91,5 @@ export LC_ALL=C
 
 * Wed Aug 25 2004 Guillaume Rousse <guillomovitch@mandrake.org> 0.08-1mdk 
 - first mdk release
+
 
