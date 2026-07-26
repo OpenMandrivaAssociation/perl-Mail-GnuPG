@@ -1,13 +1,11 @@
 %define upstream_name    Mail-GnuPG
-%define upstream_version 0.19
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 0.19
-Release:	3
+Version:	0.19
+Release:	4
 Summary:	Process email with GPG
 License:	GPL or Artistic
 Group:		Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
+Url:        https://metacpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Mail/Mail-GnuPG-0.19.tar.gz
 
 BuildRequires:	perl-devel
@@ -21,7 +19,7 @@ BuildArch:	noarch
 Use GnuPG::Interface to process or create PGP signed or encrypted email.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Build.PL installdirs=vendor
